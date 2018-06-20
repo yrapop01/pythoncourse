@@ -135,7 +135,7 @@ class GraphicBoard:
             for event in pygame.event.get():
                 if event.type == QUIT:
                     self._done = True
-                    return
+                    return None, None
                 elif event.type == MOUSEBUTTONUP:
                     x, y = event.pos
                     box = self.get_box_at_pixel(x, y)
@@ -144,7 +144,7 @@ class GraphicBoard:
                     if self._values[box.ij[0]][box.ij[1]] != ' ':
                         continue
                     box.mark(self._symbol)
-                    yield box.ij
+                    return box.ij
 
             pygame.display.update()
             clock.tick(30)

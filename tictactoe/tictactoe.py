@@ -1,5 +1,5 @@
-#from boards.graphic import GraphicBoard as Board
-from boards.shell import ShellBoard as Board
+from boards.graphic import GraphicBoard as Board
+#from boards.shell import ShellBoard as Board
 import sys
 
 def is_a_win(board, symbol):
@@ -21,7 +21,11 @@ def main():
     values = ['   ', '   ', '   ']
     board = Board(values, symbol)
 
-    for i, j in board.next_move():
+    while True:
+        i, j = board.next_move()
+        if i is None or j is None:
+            break
+
         values[i] = values[i][:j] + symbol + values[i][j+1:]
         if is_a_win(values, symbol):
             winner = symbol
