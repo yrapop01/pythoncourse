@@ -18,7 +18,7 @@ def is_a_win(board, symbol):
 def main():
     symbol = 'O'
     winner = None
-    values = ['   ' for i in range(3)]
+    values = ['   ', '   ', '   ']
     board = Board(values, symbol)
 
     for i, j in board.next_move():
