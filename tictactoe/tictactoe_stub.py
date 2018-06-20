@@ -2,14 +2,25 @@ from boards.graphic import GraphicBoard as Board
 import sys
 
 def main():
+    player = 'O'
     values = ['   ', '   ', '   ']
-    board = Board(values, 'O')
+    winner = None
+    board = Board(values, player)
 
     for i, j in board.next_move():
-        # TODO: Play
-        pass
+        #
+        # TODO: change values to make values[i][j] = player
+        #
+        if False: # change this condition to tell if there is a winner
+            winner = player
+            break
 
-    board.wait_for_quit('X')
+        #
+        # TODO: update player variable to be equal to next move player
+        #
+        board.change_symbol(player)
+
+    board.wait_for_quit(winner)
  
 if __name__ == "__main__":
     main()
