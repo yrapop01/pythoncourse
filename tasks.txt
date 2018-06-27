@@ -38,3 +38,36 @@ Divisors:
 Write a generator divisors(n) which yields all prime divisors of n.
 Write a file divisros.py which gets as argument an integer n and when executed prints all prime divisors of n.
 Bonus: Write a file subp_divisors.py, which for every number in stdin executes divisors.py and prints its output.
+
+Requests:
+---------
+
+pip install requests --proxy http://labs-proxy.checkpoint.com:8080
+
+https://github.com/yrapop01/pythoncourse/flask
+
+* implement json echo server: a server which gets json in post
+  request and sends the json back as a response
+  if the input is not a valid json, error should occur
+  Use echo_json_stub.py as a stub.
+
+* implement a file named send.py which gets an address
+  and a json string as an arguments and sends the json
+  to the given address. It expects to get a json in response.
+  If either input or output json is not invalid,
+  an error should occur.
+  Use send_stub.py as a stub.
+
+
+RPC:
+----
+
+* run exposer.py in a seperate command line window.
+* implement a module rpc.py with a decorator expose(app) which gets
+  Flask app and exposes the decorated function such that the following
+  command:
+
+    * python send.py "http://127.0.0.1:5000/f '{"args": [1, 2, 3], "kwargs": {"n": 2}}'
+
+  will cause the function f(1, 2, 3, n=2) to be called on the server and return its
+  return value as json to the client.
