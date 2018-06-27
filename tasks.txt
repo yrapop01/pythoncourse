@@ -1,0 +1,40 @@
+Anagrams:
+--------
+
+Write a function which tells if one string is an anagram of another.
+
+Palindromes:
+------------
+
+Write a function which tells if a string is a palindrome.
+
+Grep:
+-----
+
+Write python file grep.py which gets two parameters: path and regular expression.
+When grep.py is executed, it should walk through all files in the the directory tree of the path and for every file print all the lines that match the regular expression.
+
+
+Tic-Tac-Toe:
+------------
+
+Implement class ShellBoard which will complement the other tic-tac-toe files and allow playing tic-tac-toe from shell.
+
+Reflection:
+-----------
+
+Write a function remove_non_reflection(d) which gets a dictionary
+and removes all keys that are not reflections of their values.
+
+intput:
+d = {"ab": "ba", "b": "a"}
+
+output:
+     {"ab": "ba"}
+
+Divisors:
+---------
+
+Write a generator divisors(n) which yields all prime divisors of n.
+Write a file divisros.py which gets as argument an integer n and when executed prints all prime divisors of n.
+Bonus: Write a file subp_divisors.py, which for every number in stdin executes divisors.py and prints its output.
