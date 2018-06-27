@@ -42,9 +42,7 @@ Bonus: Write a file subp_divisors.py, which for every number in stdin executes d
 Requests:
 ---------
 
-pip install requests --proxy http://labs-proxy.checkpoint.com:8080
-
-https://github.com/yrapop01/pythoncourse/flask
+install flask and requests
 
 * implement json echo server: a server which gets json in post
   request and sends the json back as a response
