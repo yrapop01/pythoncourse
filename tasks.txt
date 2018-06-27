@@ -60,11 +60,11 @@ install flask and requests
 RPC:
 ----
 
-* run exposer.py in a seperate command line window.
-* implement a module rpc.py with a decorator expose(app) which gets
-  Flask app and exposes the decorated function such that the following
-  command:
+* implement a module rpc.py with a decorator expose(app) which
+  exposes the decorated function such that running the following
+  commands in parrallel (in different windows):
 
+    * python exposer.py
     * python send.py "http://127.0.0.1:5000/f '{"args": [1, 2, 3], "kwargs": {"n": 2}}'
 
   will cause the function f(1, 2, 3, n=2) to be called on the server and return its
