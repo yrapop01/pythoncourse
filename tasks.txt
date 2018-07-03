@@ -92,11 +92,12 @@ def task1():
 
 @scheduler.task('XX:10')
 def task1():
-    """This task will run every hour
-       when minute arrow minute arrrow shows 10"""
+    """This task will run every hour when minute arrow shows 10"""
     pass
 
 scheduler.run()
+
+
 
 Notes:
     'X' may only be leading (no 'X's are allowed after a number)
