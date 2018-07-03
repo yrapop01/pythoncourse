@@ -1,0 +1,14 @@
+To use notebooks, first install jupyter:
+
+pip install jupyter
+
+Then go to the directory when a notebook is placed and run:
+
+jupyer notebook
+
+This should pop up a web brower with a list of files in the current directory.
+Open the notebook you want to use (by clicking on its name).
+
+Enjoy!
+
+More on jupyter: http://jupyter.org/
