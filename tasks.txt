@@ -86,13 +86,14 @@ def task1():
 
 @scheduler.task('XX:X5')
 def task1():
-    """This task will run every 10 minutes when minute arrow value modulo 5 is zero"""
+    """This task will run every 10 minutes when minute arrow
+        value ends with 5"""
     pass
 
 @scheduler.task('XX:10')
 def task1():
     """This task will run every hour
-       when minute arrow when minute arrrow shows 10"""
+       when minute arrow minute arrrow shows 10"""
     pass
 
 scheduler.run()
