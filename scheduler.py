@@ -46,12 +46,6 @@ def grid24(timestr):
         hours = [n, 10 + n]
         if n <= 3:
             hours += [20 + n]
-    elif hourstr[1] == 'X':
-        n = int(hourstr[0])
-        if n < 2:
-            hours = list(range(10))
-        else:
-            hours = list(range(4))
     else:
         hours = [int(hourstr)]
 
@@ -60,9 +54,6 @@ def grid24(timestr):
     elif minutestr[0] == 'X':
         n = int(minutestr[1])
         minutes = [i + n for i in range(0, 60, 10)]
-    elif minutestr[1] == 'X':
-        n = int(minutestr[0])
-        minutes = [n * 10 + i for i in range(10)]
     else:
         minutes = [int(minutestr)]
 
