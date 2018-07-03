@@ -69,3 +69,34 @@ RPC:
 
   will cause the function f(1, 2, 3, n=2) to be called on the server and return its
   return value as json to the client.
+
+Scheduler:
+----------
+
+# https://github.com/yrapop01/pythoncourse/
+
+Write a class Scheduler which allows the following usage:
+
+scheduler = Scheduler()
+
+@scheduler.task('15:40')
+def task1():
+    """This task will run every day at 15:40"""
+    pass
+
+@scheduler.task('XX:X5')
+def task1():
+    """This task will run every 10 minutes when minute arrow value modulo 5 is zero"""
+    pass
+
+@scheduler.task('XX:10')
+def task1():
+    """This task will run every hour
+       when minute arrow when minute arrrow shows 10"""
+    pass
+
+scheduler.run()
+
+Notes:
+    'X' may only be leading (no 'X's are allowed after a number)
+    Use multiprocessing module to run every task in different process
