@@ -67,17 +67,17 @@ def wait_for(event):
         time.sleep((event - now).total_seconds())
 
 def run_task(timestr, func):
-    grid = grid24(timestr)[::-1]
+    grid = grid24(timestr)
 
     now = datetime.now()
     midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    events = [midnight + event for event in grid if midnight + event >= now]
+    events = (midnight + event for event in grid if midnight + event >= now)
 
     while True:
-        while events:
-            wait_for(events.pop())
+        for event in events:
+            wait_for(event)
             func()
 
         midnight += timedelta(1)
-        events = [midnight + event for event in grid]
+        events = (midnight + event for event in grid)
         wait_for(midnight)
